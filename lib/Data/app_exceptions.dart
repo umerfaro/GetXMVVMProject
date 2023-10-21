@@ -30,3 +30,16 @@ class ServerException extends AppException{
   ServerException([String? message]) : super(message, "Server Error: ");
 
 }
+ class BadRequestException extends AppException{
+
+  BadRequestException([String? message]) : super(message, "Bad Request: ");
+}
+
+class UnauthorisedException extends AppException{
+
+  UnauthorisedException([String? message]) : super(message, "Unauthorised: ");
+}
+class FetchDataException extends AppException{
+
+  FetchDataException([String? message]) : super(message, "Error During Communication: ");
+}
