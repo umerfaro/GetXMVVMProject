@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getxmvvm/Resources/getx_localization/languages.dart';
 import 'package:getxmvvm/Resources/routes/Routes.dart';
 import 'package:getxmvvm/View/SplashScreen.dart';
 
@@ -21,6 +22,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
+      locale: const Locale('en', 'US'),
+      fallbackLocale: const Locale('en', 'US'),
+      translations: Languages(),
       home: const SplashScreen(),
       getPages: AppRoutes.appRoutes(),
     );
