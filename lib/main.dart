@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getxmvvm/Resources/getx_localization/languages.dart';
 import 'package:getxmvvm/Resources/routes/Routes.dart';
-import 'package:getxmvvm/View/SplashScreen.dart';
+
+import 'package:getxmvvm/View/SplashScreen/SplashScreen.dart';
 
 void main() {
   runApp(const MyApp());
