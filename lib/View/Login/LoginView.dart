@@ -20,6 +20,8 @@ class _LoginViewState extends State<LoginView> {
     super.dispose();
   }
 
+
+
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.sizeOf(context).height * 1;
@@ -79,8 +81,8 @@ class _LoginViewState extends State<LoginView> {
             SizedBox(
               height: height * 0.02,
             ),
-            RoundButton(
-              loading: false,
+            Obx(() => RoundButton(
+              loading: _loginController.loginButtonEnable.value,
               buttonColor: Theme.of(context).colorScheme.primary,
               text: 'Login',
               height: height * 0.06,
@@ -88,15 +90,12 @@ class _LoginViewState extends State<LoginView> {
               onPressed: () {
                 if (_loginController.logInFormKey.value.currentState!
                     .validate()) {
-                  Map data = {
-                    "email":
-                        _loginController.emailController.value.text.toString(),
-                    "password": _loginController.passwordController.value.text
-                        .toString()
-                  };
+
+                  _loginController.loginApi();
+
                 }
               },
-            )
+            ))
           ],
         ));
   }

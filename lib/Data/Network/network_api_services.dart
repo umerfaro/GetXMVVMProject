@@ -64,7 +64,8 @@ class NetworkApiServices extends BaseApiService {
       final response = await http
           .post(
             Uri.parse(url),
-            body: jsonEncode(data),
+        body: data,
+            // body: jsonEncode(data),
 
             /// if data is not in raw form then simple data
           )
